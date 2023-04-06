@@ -12,8 +12,8 @@ html {
 }
 
 body {
-  background-color: var(--theme-background);
-  color: var(--font-color);
+  background-color: $theme-background;
+  color: $font-color;
   font-family: sans-serif,"Segoe UI", Tahoma, Geneva, Verdana;
   padding: 0;
   margin: 0;

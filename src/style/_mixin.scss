@@ -1,0 +1,31 @@
+@mixin font-size($value) {
+    font-size: $value;
+}
+
+@mixin flex($align, $justify) {
+    display: flex;
+    align-items: $align;
+    justify-content: $justify;
+}
+
+@mixin flex-justify($justify) {
+    display: flex;
+    justify-content: $justify;
+}
+
+@mixin flex-align($align) {
+    display: flex;
+    align-items: $align;
+}
+
+@mixin bg-color($value) {
+    background-color: $value;
+}
+
+@mixin bd-radius($value) {
+    border-radius: $value;
+}
+
+@mixin border($width, $color) {
+    border: $width solid $color;
+}

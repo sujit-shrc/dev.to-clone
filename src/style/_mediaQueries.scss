@@ -1,0 +1,38 @@
+
+@media only screen and (max-width: 1025px){
+    .header{
+        padding: 1rem;
+
+        >.showdropDownMenu{
+            right: 1rem;
+        }
+    }
+}
+
+@media only screen and  (max-width: 768px){
+    .header .headerContainer{
+        .hamburgerMenu{
+            display: block;
+        }
+        .hidden-items{
+            display: none;
+        }
+        .right_col{
+            .hiddenSearchIcon{
+                display: flex;
+                background-color: rgba($color: #000000, $alpha: 0.15);
+
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 640px){
+    .header .showdropDownMenu{
+        position: absolute;
+        right: 0;
+        left: 0;
+        margin: 0.3rem 0.5rem;
+        
+    }
+}

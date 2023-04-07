@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import logo  from '../../assets/dev-to.png'
 import { FiSearch } from "react-icons/fi";
 import { RiNotification3Line } from "react-icons/ri";
+import { BiMenu } from "react-icons/bi";
 
 const Navbar = () => {
 
@@ -14,17 +15,14 @@ const Navbar = () => {
   return (
     <div className="header">
       <div className="headerContainer">
-
-        <button className="hamburgerMenu">
-        </button>
+        <i className='hamburgerMenu'> <BiMenu /></i>
 
         <a href="#">
           <img src={logo} alt="logo" />
         </a>
         <div className="searchBox hidden-items">
           <form action="">
-            <input type="text" name="" id=""
-              placeholder="Search..." />
+            <input type="text" name="" id="" placeholder="Search..." />
             <i className="search_icon">
               <FiSearch />
             </i>
@@ -33,7 +31,7 @@ const Navbar = () => {
 
         <div className="right_col">
           <button className="btn hidden-items">Create Post</button>
-          <i className="hiddenSearchIcon" >
+          <i className="hiddenSearchIcon">
             <FiSearch />
           </i>
           <i>
@@ -51,7 +49,7 @@ const Navbar = () => {
       <div className={showMenu ? "showdropDownMenu" : "hidedropDownMenu"}>
         <ul>
           <li>
-            <a href="/profile" className="profile" onClick={toggle} >
+            <a href="/profile" className="profile" onClick={toggle}>
               <div className="userName">sujit kumar</div>
               <small className="userHandle">@userhandle</small>
             </a>

@@ -13,6 +13,7 @@ import comparison from "../assets/comparison.png";
 import thumb from "../assets/thumb.png";
 import privacy from "../assets/privacy.png";
 import eye from "../assets/eye.png";
+import settings from "../assets/settings.png";
 
 
 export default {
@@ -31,4 +32,5 @@ export default {
     thumb,
     privacy,
     eye,
+    settings,
 }

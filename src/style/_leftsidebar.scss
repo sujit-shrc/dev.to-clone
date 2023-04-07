@@ -1,0 +1,85 @@
+.leftBar{
+    >.menu{
+        ul>li{            
+            a{
+                padding: 0.5rem;
+                @include flex-align(center);
+                @include bd-radius(5px);
+                font-weight: 400;
+
+                &:hover{
+                    @include bg-color($main-a);
+                    color: $light-blue;
+                }
+
+                i{  display: flex;
+                    padding-right: 0.5rem;
+                }
+            }
+        }
+        h3{
+            font-weight: 500;
+            margin: 1rem 1.2rem;
+        }
+
+    }
+    .socialLinks{
+        @include flex-align(center);
+        padding: 1rem 0;
+        
+        a{  
+            @include flex-align(center);
+            font-size: 1.5rem;
+            margin: 0 0.2rem;
+            @include bd-radius(5px);
+            @include bg-color($hover-color);
+            i{  
+                padding: 0.3rem;
+                @include flex-align(center);
+            }
+
+            &:first-child{
+            margin-left: 0;
+            }
+            &:hover{
+                @include bg-color($main-a);
+                color: $light-blue;
+            }
+        }
+    }
+    .tagList{
+        margin-bottom: 1.5rem;
+        >.titleContainer{
+            @include flex(center, space-between);
+            padding: 0.5rem;
+            padding-right: 0;
+
+            i{
+                display: flex;
+                padding: 0.5rem;
+                @include bg-color($main-a);
+                @include bd-radius(5px);
+
+                &:hover{
+                    @include bg-color(#e4d7d7);
+                }
+            }
+        }
+        ul{
+            height: 40vh;
+            overflow-y: auto;
+            line-height: 1.6;
+
+            li{
+                padding: 0.5rem;
+                cursor: pointer;
+                @include bd-radius(5px);
+
+                &:hover{
+                    @include bg-color($main-a);
+                    color: $light-blue;
+                }
+            }
+        }
+    }
+}

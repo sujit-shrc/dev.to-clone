@@ -3,7 +3,7 @@ import './App.scss'
 import { Content, LeftSideBar, Navbar, RightSideBar } from './components'
 
 function App() {
-  const [hamburgerMenu, setHamburgerMenu] = useState(true);
+  const [hamburgerMenu, setHamburgerMenu] = useState(false);
 
   const toggle = () => {
     setHamburgerMenu(!hamburgerMenu);

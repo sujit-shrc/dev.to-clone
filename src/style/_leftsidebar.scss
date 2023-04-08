@@ -59,6 +59,7 @@
 
                 &:hover{
                     @include bg-color(#e4d7d7);
+                    cursor: pointer;
                 }
             }
         }
@@ -107,6 +108,7 @@
             @include flex-align(center);
             font-size: 1.5rem;
             padding: 5px;
+            @include bd-radius(5px);
             &:hover{
                 @include bg-color($hover-color);
                 color: $light-blue;

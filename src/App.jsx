@@ -1,14 +1,19 @@
-
+import { useState } from 'react'
 import './App.scss'
 import { Content, LeftSideBar, Navbar, RightSideBar } from './components'
 
 function App() {
+  const [hamburgerMenu, setHamburgerMenu] = useState(true);
+
+  const toggle = () => {
+    setHamburgerMenu(!hamburgerMenu);
+  };
   
   return (
     <div className="App">
-      <Navbar />
+      <Navbar openMenu={toggle} />
       <main className="main-container">
-        <LeftSideBar />
+        <LeftSideBar burgerMenu={hamburgerMenu} closeMenu={toggle} />
         <Content />
         <RightSideBar />
       </main>

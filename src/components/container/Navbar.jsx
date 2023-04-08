@@ -4,18 +4,24 @@ import { FiSearch } from "react-icons/fi";
 import { RiNotification3Line } from "react-icons/ri";
 import { BiMenu } from "react-icons/bi";
 
-const Navbar = () => {
-
+const Navbar = ({ openMenu }) => {
   const [showMenu, setshowMenu] = useState(false);
 
   const toggle = () => {
     setshowMenu(!showMenu);
-  }
+  };
 
   return (
     <div className="header">
       <div className="headerContainer">
-        <i className='hamburgerMenu'> <BiMenu /></i>
+        <i
+          className="hamburgerMenu"
+          onClick={() => {
+            openMenu();
+          }}
+        >
+          <BiMenu />
+        </i>
 
         <a href="#">
           <img src={logo} alt="logo" />
@@ -88,6 +94,6 @@ const Navbar = () => {
       </div>
     </div>
   );
-}
+};
 
 export default Navbar

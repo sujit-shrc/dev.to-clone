@@ -1,6 +1,6 @@
-.leftBar{
-    >.menu{
-        ul>li{            
+    .menu{
+        ul>li{     
+            line-height: 1.6;       
             a{
                 padding: 0.5rem;
                 @include flex-align(center);
@@ -26,20 +26,17 @@
     .socialLinks{
         @include flex-align(center);
         padding: 1rem 0;
+        padding-bottom: 0.5rem;
         
         a{  
             @include flex-align(center);
             font-size: 1.5rem;
-            margin: 0 0.2rem;
+            margin: 0 auto;
             @include bd-radius(5px);
             @include bg-color($hover-color);
             i{  
                 padding: 0.3rem;
                 @include flex-align(center);
-            }
-
-            &:first-child{
-            margin-left: 0;
             }
             &:hover{
                 @include bg-color($main-a);
@@ -79,7 +76,44 @@
                     @include bg-color($main-a);
                     color: $light-blue;
                 }
+        }
+    }
+}
+
+.hamburger{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+
+    .headerContent{
+        background-color: #fff;
+        max-width: 280px;
+        width: 90%;
+        height: 100%;
+        overflow-y: auto;
+    }
+
+
+    header{
+        @include flex(center,space-between);
+        padding: 1rem;
+        padding-bottom: 0.8rem;
+        border-bottom: 1px solid $main-3;
+
+        button{
+            @include flex-align(center);
+            font-size: 1.5rem;
+            padding: 5px;
+            &:hover{
+                @include bg-color($hover-color);
+                color: $light-blue;
             }
         }
+    }
+    .headerItems{
+        padding: 0.5rem;
     }
 }

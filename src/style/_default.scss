@@ -71,3 +71,9 @@ ul {
   grid-template-rows: 1fr;
   gap: 1rem 1rem;
 }
+
+@media only screen and (max-width: 1025px){
+    .main-container{
+      padding: 1rem;
+    }
+}

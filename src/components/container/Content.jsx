@@ -4,13 +4,14 @@ import ArticleComponent from "./ArticleComponent";
 const Content = () => {
 
   const [articles, setArticles] = useState([]);
+  const [coverImage, setCoverImage] = useState("");
 
   useEffect(() => {
     setTimeout(async () => {
       const res = await fetch("https://dev.to/api/articles");
       const data = await res.json();
-      console.log(data);
       setArticles(data);
+      setCoverImage(data[1]['cover_image'])
     }, 2000);
   },[]);
 
@@ -61,9 +62,19 @@ const Content = () => {
       </header>
 
       <div className="articles">
+        {coverImage && (
+          <a href={coverImage}>
+            <img src={coverImage} alt="not found" />
+          </a>
+        )}
         {articles &&
           articles.map((article, key) => {
-            return <ArticleComponent key={key} articles={article} />;
+            return (
+              <ArticleComponent
+                key={key}
+                articles={article}
+              />
+            );
           })}
       </div>
     </div>

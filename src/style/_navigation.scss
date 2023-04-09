@@ -1,11 +1,12 @@
 .header{
-    // position: fixed;
+    position: fixed;
     max-width: 100%;
-    // width: 100%;
+    width: 100%;
     height: $header-height;
     padding: 1rem 3rem;
     display: flex;
     @include bg-color($header-bg);
+    box-shadow: 5px 5px 10px rgba($color: #000000, $alpha: 0.08);
 
     .headerContainer{
         max-width: var(--site-width);

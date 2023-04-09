@@ -1,6 +1,10 @@
 import React from 'react'
 import { BiBookmarks } from "react-icons/bi";
 import { RiChat1Line } from "react-icons/ri";
+import dayjs from 'dayjs';
+import relativeTime from 'dayjs/plugin/relativeTime'
+
+dayjs.extend(relativeTime);
 
 const ArticleComponent = ({articles }) => {
 
@@ -9,16 +13,17 @@ const ArticleComponent = ({articles }) => {
     url,
     comments_count,
     public_reactions_count,
-    readable_publish_date,
     published_timestamp,
     reading_time_minutes,
     tag_list,
+    cover_image,
     user,
   } = articles;
   
 
   return (
     <article className="article">
+     
       <div className="articleDetails">
         <div className="writer-img">
           <img src={user.profile_image_90} alt="user-image" />
@@ -29,7 +34,11 @@ const ArticleComponent = ({articles }) => {
           </a>
           <a href={url}>
             <small className="timestamp">
-              {readable_publish_date} (1 day ago)
+              {new Date(published_timestamp).toLocaleDateString(undefined, {
+                day: "numeric",
+                month: "long",
+              })}
+              &nbsp; ({dayjs(published_timestamp).fromNow()})
             </small>
           </a>
           <a href={url}>

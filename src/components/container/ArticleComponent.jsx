@@ -23,7 +23,18 @@ const ArticleComponent = ({articles }) => {
 
   return (
     <article className="article">
-     
+      {cover_image && (
+        <a
+          href={url}
+          className="article__image"
+          style={{
+            backgroundImage: `url(${cover_image})`,
+          }}
+        >
+          &nbsp;
+        </a>
+      )}
+
       <div className="articleDetails">
         <div className="writer-img">
           <img src={user.profile_image_90} alt="user-image" />

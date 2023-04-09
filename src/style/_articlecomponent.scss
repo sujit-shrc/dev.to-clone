@@ -4,6 +4,22 @@
     background-color: #fff;
     @include bd-radius(5px);
     @include border(1px, $main-2);
+
+    &:not(:first-child) {
+    .article__image {
+      display: none;
+    }
+  }
+
+    &__image {
+    display: block;
+    width: 100%;
+    height: auto;
+    background-size: cover;
+    background-position: center center;
+    padding-bottom: 40%;
+    border-radius: 5px 5px 0 0;
+  }
    
     .articleDetails{
         display: flex;

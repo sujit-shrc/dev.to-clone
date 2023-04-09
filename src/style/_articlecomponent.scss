@@ -1,15 +1,14 @@
 .article{
     margin-bottom: 0.5rem;
-    min-width: fit-content;
     background-color: #fff;
     @include bd-radius(5px);
     @include border(1px, $main-2);
 
     &:not(:first-child) {
-    .article__image {
-      display: none;
+        .article__image {
+        display: none;
+        }
     }
-  }
 
     &__image {
     display: block;
@@ -22,15 +21,38 @@
   }
    
     .articleDetails{
-        display: flex;
         padding: 1rem;
         padding-right: 0;
-        .writer-img{
-            display: block;
-            width: 2.5rem;
-            img{
-                width: 100%;
-                @include bd-radius(50%);
+        .writer-data{
+            display: flex;
+            align-items: center;
+            column-gap: 1rem;
+            .user-profile{
+                width: 2.5rem;
+                img{
+                    width: 100%;
+                    @include bd-radius(50%);
+                }
+            }
+            .user-info{
+                display: flex;
+                flex-direction: column;
+                
+                .user-name{
+                    font-weight: 450;
+                    font-size: 0.95rem;
+                    color: $main-8;
+                    &:hover{
+                        color: $main-10;
+                    }
+                }
+                .timestamp{
+                    font-size: 0.875rem;
+                    color: $main-7;
+                    &:hover{
+                        color: $main-10;
+                        }
+                }
             }
         
         }
@@ -38,22 +60,8 @@
             display: flex;
             flex-direction: column;
             width: 100%;
+            padding: 0.5rem;
             padding-left: 1rem;
-
-            .user-name{
-                font-weight: 450;
-                color: $main-8;
-                &:hover{
-                    color: $main-10;
-                }
-            }
-            .timestamp{
-                font-size: 0.9rem;
-                color: $main-7;
-                &:hover{
-                    color: $main-10;
-                }
-            }
             
         }
         h2{
@@ -65,6 +73,8 @@
         }
         .tags{
             margin-top: 0.5rem;
+            display: flex;
+            flex-wrap: wrap;
             span{
                 font-size: 0.9rem;
                 padding: 0.2rem 0.4rem;
@@ -85,7 +95,6 @@
 
         .reactions{
             @include flex-align(center);
-            column-gap: 20px;
             .reactions-info{
                @include flex-align(center);
                 column-gap: 5px;
@@ -126,7 +135,7 @@
 
         .save{
             @include flex-align(center);
-            column-gap: 1.2rem;
+            column-gap: 0.5rem;
             
             i{
                 display: flex;

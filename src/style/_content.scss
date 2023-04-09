@@ -14,14 +14,17 @@
                 a{
                     font-size: 1.2rem;
                     font-weight: 400;
+                    &:hover{
+                        font-weight: 500;
+
+                    }
                 }
                 &:first-child{
                     margin: 0;
                 }
                 &:hover{
                     @include bg-color($main-a);
-                    color: $light-blue;
-                    font-weight: 500;
+                    color: $light-blue;   
                 }
             }
         }

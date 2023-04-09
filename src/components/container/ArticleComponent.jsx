@@ -36,22 +36,31 @@ const ArticleComponent = ({articles }) => {
       )}
 
       <div className="articleDetails">
-        <div className="writer-img">
-          <img src={user.profile_image_90} alt="user-image" />
+        <div className="writer-data">
+          <div className="user-profile">
+            <img src={user.profile_image_90} alt="user-image" />
+          </div>
+          <div className="user-info">
+            <div>
+              <a href={`http://dev.to/${user.name}`}>
+                <span className="user-name">{user.name} &nbsp;</span>
+              </a>
+            </div>
+            <div>
+              <a href={url}>
+                <small className="timestamp">
+                  {new Date(published_timestamp).toLocaleDateString(undefined, {
+                    day: "numeric",
+                    month: "long",
+                  })}
+                  &nbsp; ({dayjs(published_timestamp).fromNow()})
+                </small>
+              </a>
+            </div>
+          </div>
         </div>
+
         <div className="writer-details">
-          <a href={`http://dev.to/${user.name}`}>
-            <span className="user-name">{user.name}</span>
-          </a>
-          <a href={url}>
-            <small className="timestamp">
-              {new Date(published_timestamp).toLocaleDateString(undefined, {
-                day: "numeric",
-                month: "long",
-              })}
-              &nbsp; ({dayjs(published_timestamp).fromNow()})
-            </small>
-          </a>
           <a href={url}>
             <h2>{title}</h2>
           </a>
@@ -115,7 +124,9 @@ const ArticleComponent = ({articles }) => {
                   </div>
 
                   <a href="">
-                    <span>{public_reactions_count}</span> Reactions
+                    <span className="hidden">
+                      {public_reactions_count} &nbsp; Reactions
+                    </span>
                   </a>
                 </div>
               )}
@@ -128,14 +139,14 @@ const ArticleComponent = ({articles }) => {
                         <RiChat1Line />
                       </i>
                       {comments_count}
-                      <span className="hidden">comments</span>
+                      <p className="hidden">Comments</p>
                     </span>
                   ) : (
                     <span>
                       <i>
                         <RiChat1Line />
                       </i>
-                      <span className="hidden">Add Comens</span>
+                      <p className="hidden">Add a Comments</p>
                     </span>
                   )}
                 </div>

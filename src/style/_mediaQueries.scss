@@ -1,41 +1,83 @@
+@media only screen and (max-width: 1025px) {
+  .header {
+    padding: 1rem;
 
-@media only screen and (max-width: 1025px){
-    .header{
-        padding: 1rem;
-
-        >.showdropDownMenu{
-            right: 1rem;
-        }
+    > .showdropDownMenu {
+      right: 1rem;
     }
+  }
+  .rightSideBar {
+    display: none;
+  }
 }
 
-@media only screen and  (max-width: 768px){
-    .header .headerContainer{
-        .hamburgerMenu{
-            display: flex;
-        }
-        .hidden-items{
-            display: none;
-        }
-        .right_col{
-            .hiddenSearchIcon{
-                display: flex;
-                background-color: rgba($color: #000000, $alpha: 0.09);
+@media only screen and (max-width: 768px) {
+  .header .headerContainer {
+    .hamburgerMenu {
+      display: flex;
+    }
+    .hidden-items {
+      display: none;
+    }
+    .right_col {
+      .hiddenSearchIcon {
+        display: flex;
+        background-color: rgba($color: #000000, $alpha: 0.09);
+      }
+    }
+  }
+  .leftBar {
+    display: none;
+  }
+}
 
+@media only screen and (max-width: 640px) {
+  .main-container {
+    padding: 10px;
+  }
+  .header .showdropDownMenu {
+    position: absolute;
+    right: 0;
+    left: 0;
+    margin: 0.3rem 0.5rem;
+  }
+  .hidden {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 390px) {
+    
+  .article {
+    h2 {
+      font-size: 1.1rem;
+    }
+    .articleDetails{
+        padding-left: 0;
+        .writer-data{
+            padding-left: 0.5rem ;
+        }
+        .writer-details{
+            padding: 0.5rem;
+        }
+    }
+
+    .additional-info {
+      .reactions {
+        .comments {
+          padding: 0.2rem 0.4rem;
+          span {
+            column-gap: 2px;
+            i {
+              font-size: 1.1rem;
             }
+          }
         }
+      }
+      .save {
+        @include flex-align(center);
+        column-gap: 0.3rem;
+      }
     }
-    .leftBar{
-        display: none;
-    }
-}
-
-@media only screen and (max-width: 640px){
-    .header .showdropDownMenu{
-        position: absolute;
-        right: 0;
-        left: 0;
-        margin: 0.3rem 0.5rem;
-        
-    }
+  }
 }

@@ -1,7 +1,8 @@
 .mainContent{
     margin-bottom: 1.5rem;
+    width: 100%;
     header{
-        @include flex(center, space-between);
+        @include flex-align(center);
         ul{
             @include flex-align(center);
             padding: 0.5rem 0;
@@ -25,12 +26,5 @@
             }
         }
 
-    }
-    .articles{
-        img{
-            width: 100%;
-            height: auto;
-            @include bd-radius(5px);
-        }
     }
 }

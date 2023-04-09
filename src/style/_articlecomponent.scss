@@ -1,12 +1,12 @@
 .article{
     margin-bottom: 0.5rem;
+    min-width: fit-content;
     background-color: #fff;
     @include bd-radius(5px);
     @include border(1px, $main-2);
    
     .articleDetails{
         display: flex;
-        float: column;
         padding: 1rem;
         padding-right: 0;
         .writer-img{
@@ -20,8 +20,8 @@
         }
         .writer-details{
             display: flex;
-            width: 100%;
             flex-direction: column;
+            width: 100%;
             padding-left: 1rem;
 
             .user-name{
@@ -65,14 +65,14 @@
     .additional-info{
         margin-top: 1rem;
         @include flex(center, space-between);
-        margin-right: 2rem;
+        margin-right: 1rem;
 
         .reactions{
             @include flex-align(center);
             column-gap: 20px;
             .reactions-info{
                @include flex-align(center);
-                gap: 5px;
+                column-gap: 5px;
                 padding: 0.4rem 0.5rem;
                 .icons-container{
                     @include flex-align(center);
@@ -92,7 +92,7 @@
                 @include bd-radius(5px);
                 span{
                     @include flex-align(center);
-                    gap: 5px;
+                    column-gap: 5px;
                     i{
                         display: flex;
                         font-size: 1.2rem;

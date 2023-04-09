@@ -1,0 +1,128 @@
+.article{
+    margin-top: 0.5rem;
+    background-color: #ffffff;
+    @include bd-radius(5px);
+   
+    .articleDetails{
+        display: flex;
+        float: column;
+        padding: 1rem;
+        padding-right: 0;
+
+        .writer-img{
+            display: block;
+            width: 2.5rem;
+            img{
+                width: 100%;
+                @include bd-radius(50%);
+            }
+        
+        }
+        .writer-details{
+            display: flex;
+            width: 100%;
+            flex-direction: column;
+            padding-left: 1rem;
+
+            .user-name{
+                font-weight: 450;
+                color: $main-8;
+                &:hover{
+                    color: $main-10;
+                }
+            }
+            .timestamp{
+                // background-color: red;
+                font-size: 0.9rem;
+                color: $main-7;
+                &:hover{
+                    color: $main-10;
+                }
+            }
+            
+        }
+        h2{
+            margin-top: 0.5rem;
+            &:hover{
+                color:$light-blue;
+            }
+
+        }
+        .tags{
+            margin-top: 0.5rem;
+            span{
+                font-size: 0.9rem;
+                padding: 0.2rem 0.4rem;
+                @include bd-radius(5px);
+                &:hover{
+                    @include border(1px, $main-2);
+                    @include bg-color($hover-color);
+                }
+            }
+
+        }
+    }
+
+    .additional-info{
+        margin-top: 1rem;
+        @include flex(center, space-between);
+        margin-right: 2rem;
+
+        .reactions{
+            @include flex-align(center);
+            column-gap: 20px;
+            .reactions-info{
+               @include flex-align(center);
+                gap: 5px;
+                padding: 0.4rem 0.5rem;
+                .icons-container{
+                    @include flex-align(center);
+                    span{
+                        @include flex-align(center);
+                    }
+                }
+                &:hover{
+                    @include bd-radius(5px);
+                    @include bg-color($hover-color);
+
+                }
+                
+            }
+            .comments{
+                padding: 0.3rem 0.5rem;
+                @include bd-radius(5px);
+                span{
+                    @include flex-align(center);
+                    gap: 5px;
+                    i{
+                        display: flex;
+                        font-size: 1.2rem;
+                        :hover{
+                            color:$light-blue;
+                        }
+                    }
+
+                }
+                &:hover{
+                    @include bg-color($hover-color);
+                }
+            }
+        }
+
+        .save{
+            @include flex-align(center);
+            column-gap: 1.2rem;
+            
+            i{
+                display: flex;
+                font-size: 1.4rem;
+                padding: 0.5rem;
+                &:hover{
+                    @include bg-color($hover-color);
+                    @include bd-radius(5px);
+                    color: $light-blue;
+                }
+            }
+        }
+    }
+}

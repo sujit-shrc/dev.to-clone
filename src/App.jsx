@@ -15,7 +15,7 @@ function App() {
       <main className="main-container">
         <LeftSideBar burgerMenu={hamburgerMenu} closeMenu={toggle} />
         <Content />
-        <RightSideBar />
+        {/* <RightSideBar /> */}
       </main>
     </div>
   );

@@ -101,8 +101,14 @@
                 padding: 0.4rem 0.5rem;
                 .icons-container{
                     @include flex-align(center);
+                    cursor: pointer;
                     span{
                         @include flex-align(center);
+                        @include border(1px, $main-1);
+                        @include bd-radius(50%);
+                        padding: 2px;
+                        @include bg-color($main-a);
+
                     }
                 }
                 &:hover{

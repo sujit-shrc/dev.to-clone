@@ -12,3 +12,27 @@
   </p>  
 </p>
 
+
+## Overview
+
+This application is built with the following technologies:
+
+- [ReactJs](https://reactjs.org)
+- [Dev.to api](https://docs.forem.com/api/)
+
+
+### Installation
+
+1. Clone the repo
+    ```sh
+    git clone https://github.com/mnamesujit/dev.to-clone
+    ```
+2. Install NPM packages
+    ```sh
+    npm install
+    ```
+3. Start the application
+    ```sh
+    npm run dev
+    ```
+The above command will start the application on [http://localhost:5500/](http://localhost:5500).

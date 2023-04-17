@@ -2,7 +2,7 @@
 
 <p align="center">
   <a href="#">
-    <img src="./public/assets/images/logo.svg" alt="Logo" width="80" height="80">
+    <img src="./public/devto_logo.svg" alt="Logo" width="80" height="80">
   </a>
 
   <h2 align="center">Dev.to Clone</h2>

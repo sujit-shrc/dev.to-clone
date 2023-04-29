@@ -6,7 +6,7 @@
   </a>
 
   <h2 align="center">Dev.to Clone</h2>
-
+#
   <p align="center">
     Built with ReactJs, Scss & dev.to API
   </p>  

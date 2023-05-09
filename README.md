@@ -21,7 +21,8 @@ This application is built with the following technologies:
 - [Dev.to api](https://docs.forem.com/api/)
 
 ## Features
- - Added Infinite Scrolling of Articles
+ - Added Infinite Scrolling of Articles.
+ - Fully Responsive for all devices.
 
 
 ### Installation

@@ -20,6 +20,9 @@ This application is built with the following technologies:
 - [ReactJs](https://reactjs.org)
 - [Dev.to api](https://docs.forem.com/api/)
 
+## Features
+ - Added Infinite Scrolling of Articles
+
 
 ### Installation
 

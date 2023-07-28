@@ -84,7 +84,7 @@ const RightSideBar = () => {
         <p>
           <img src="https://picsum.photos/200/300" alt="" />
         </p>
-        <h2>
+        {/* <h2>
           <a href="/#">"Hack the Planet" with New Relic & DEV</a>
         </h2>
 
@@ -94,7 +94,7 @@ const RightSideBar = () => {
           <strong>
             <a href="/#">&nbsp;join the hackathon</a>
           </strong>
-        </p>
+        </p> */}
       </div>
 
       <CardComponent tag="Listings" articles={listings} />

@@ -1,0 +1,51 @@
+.card {
+    margin: 1rem 0;
+    background-color: $main-0;
+  
+    border-radius: 5px;
+    line-height: 1.5;
+  
+    height: max-content;
+  
+    header {
+      display: flex;
+      align-items: center;
+      padding: 0.5rem 1rem;
+  
+      h3 {
+        font-size: 1.25rem;
+        flex: 1;
+      }
+      small {
+        color: $main-theme;
+        font-size: 0.875rem;
+      }
+    }
+  
+    li {
+      display: block;
+      padding: 1rem;
+      border-top: 1px solid $main-1;
+      border-bottom: 1px solid $main-1;
+      cursor: pointer;
+      transition: all 0.2s;
+      &:hover {
+        background-color: #fff;
+        color: $main-theme-darker;
+      }
+    }
+  
+    small {
+      color: $main-6;
+    }
+  
+    span {
+      background-color: $new-item-color;
+      font-size: 0.90rem;
+      text-transform: capitalize;
+      padding: 0.25rem 0.50rem;
+      border-radius: 5px;
+      margin-top: 5px;
+    }
+  }
+  
